@@ -12,8 +12,12 @@
 #include <stdlib.h>
 #define NUM_THREADS    5
 
+int shared_variable = 0;
+
 void *PrintHello(void *threadid)
 {
+	shared_variable +=1;
+	printf("shared variable: %d\n", shared_variable);
     long tid;
     tid = (long)threadid;
     printf("Hello World! It's me, thread #%ld!\n", tid);
