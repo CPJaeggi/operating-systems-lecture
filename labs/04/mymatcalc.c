@@ -2,7 +2,7 @@
 
 int main()
 {
-	int a[10][10], b[10][10], result [10][10], r1, c1, r2, c2, i, j, k;
+	int a[16][16], b[16][16], result [16][16], r1, c1, r2, c2, i, j, k;
 	printf("Enter rows and columns for the 1. Matrix: ");
 	scanf("%d %d", &r1, &c1);
 
