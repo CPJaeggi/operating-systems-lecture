@@ -29,13 +29,13 @@ context_switches = []
 avg_turnaround_tms = []
 max_process_sizes = []
 
-processes =[2,3,4,12,8,5,6,1]
+processes =[100,88,400,53,230,76,64,27,150,130]
 num_processes = len(processes)
 
 while quantum <= quantum_max:
     
-    processes =[2,3,4,12,8,5,6,1]
-    max_process_size = 0
+    processes =[100,88,400,53,230,76,64,27,150,130]
+    max_process_size = 1000
     context_switch = 2
     context_switchs = 0
     execution_time = 0
@@ -80,8 +80,8 @@ fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
 z = max_process_sizes
-y = avg_turnaround_tms
-# y = context_switches
+# y = avg_turnaround_tms
+y = context_switches
 x = quantums
 
 ax.plot_trisurf(x, y, z, cmap=cm.jet, linewidth=0.2)

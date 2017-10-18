@@ -7,7 +7,7 @@
 #-----------------------------------------------------------------
 #| VARIABLE SECTION                                              |
 #-----------------------------------------------------------------
-FILE_COUNT=$(find linux/ -type f | wc -l)
+FILE_COUNT=$(find linux/ -type f | grep "*" | wc -l)
 FILE_COUNT_ARCH=$(find linux/arch/ -type f | wc -l)
 FILE_COUNT_CRYPTO=$(find linux/crypto/ -type f | wc -l)
 FILE_COUNT_INCLUDE=$(find linux/include/ -type f | wc -l)

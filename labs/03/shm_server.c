@@ -50,6 +50,8 @@ main()
      * to '*', indicating that it has read what 
      * we put there.
      */
+
+	
     while (*shm != '*')
         sleep(1);
 

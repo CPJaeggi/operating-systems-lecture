@@ -38,10 +38,22 @@ int main(){
 	
 	else if (pid == 0) {
 		/* child process */
+	sprintf(shared_memory,"Yo!");
         printf("*%s\n", shared_memory);
 	}
 
 	else {
+		pid = fork();
+		if (pid < 0){
+			/*Error*/
+			fprintf(stderr, "Fork Failed");
+			exit (-1);
+		}
+		else if (pid == 0){
+			/*new child process*/
+				sprintf(shared_memory,"SUP?");
+				printf("*%s\n", shared_memory);
+		}
 		/* parent process */
 		/* parent will wait for the child to complete */ 
 		wait(NULL);
