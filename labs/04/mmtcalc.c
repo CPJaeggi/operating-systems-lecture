@@ -6,7 +6,7 @@
 #define X 1000
 #define Y 1000
 #define Z 1000
-#define NUM_THREADS 10
+#define NUM_THREADS 4
 
 int A [X][Y];
 int B [Y][Z];
@@ -28,7 +28,16 @@ int main(){
 	t = clock();
 
 	generateMatrices();
+
+	/*Un-comment to show matrices*/
+	/*printf("\nMatrix A:\n");
+	printMatrix(A);
+	printf("\nMatrix B:\n");
+	printMatrix(B);*/
 	multiply();
+	/*Un-comment to show result*/
+	/*printf("\nResult:\n");
+	printMatrix(C);*/
 	
 	t = clock() - t;
 	double time_taken = ((double)t)/CLOCKS_PER_SEC;
